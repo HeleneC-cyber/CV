@@ -1,0 +1,23 @@
+@font-face {
+    font-family: "Antique olive";
+    src: url("./font/antique-olive/AQCT.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Rage";
+    src: url("./font/rage/RAGE.TTF") format("truetype");
+}
+
+h1 {
+    color: $color-004;
+    @include rem(55);
+    margin-bottom: 20px;
+}
+p {
+    font-family: $font-002;
+    color: $color-008;
+}
+.text-green {
+  color: $color-007; 
+  font-family: $font-001;
+}
