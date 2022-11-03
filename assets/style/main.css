@@ -248,6 +248,7 @@ a {
 
 .journey {
   position: relative;
+  padding-bottom: 755px;
 }
 .journey::after {
   content: "";
@@ -282,10 +283,10 @@ a {
   max-width: 100%;
   width: 632px;
 }
-.journey__content:nth-child(2n+1) {
+.journey__content:nth-child(2n) {
   margin-left: 100px;
 }
-.journey__content:nth-child(2n+1) h5::after {
+.journey__content:nth-child(2n) h5::after {
   content: "";
   position: absolute;
   width: 200px;
@@ -294,16 +295,17 @@ a {
   border-radius: 25px 0 0 25px;
   left: 105%;
 }
-.journey__content:nth-child(2n) {
-  margin: 200px 100px 200px auto;
+.journey__content:nth-child(2n+1) {
+  margin: 200px 100px 0 auto;
+  padding-bottom: 200px;
 }
-.journey__content:nth-child(2n) h4 {
+.journey__content:nth-child(2n+1) h4 {
   text-align: end;
 }
-.journey__content:nth-child(2n) h5 {
+.journey__content:nth-child(2n+1) h5 {
   text-align: end;
 }
-.journey__content:nth-child(2n) h5::after {
+.journey__content:nth-child(2n+1) h5::after {
   content: "";
   position: absolute;
   width: 200px;
@@ -319,15 +321,18 @@ a {
 .journey__content .text-green {
   font-size: 1.3125rem;
 }
-.journey .cloud {
+.journey .cloud-left {
   position: absolute;
-  top: 0;
-}
-.journey .cloud:nth-child(2n) {
+  top: 37%;
   left: 0;
 }
-.journey .cloud:nth-child(2n+1) {
+.journey .cloud-right {
+  position: absolute;
   right: 0;
+  top: 16%;
+}
+.journey .cloud-right:last-child {
+  top: 60%;
 }
 
 .transition {

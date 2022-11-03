@@ -1,5 +1,6 @@
 .journey {
     position: relative;
+    padding-bottom: 755px;
 
     &::after {
         content: "";
@@ -12,6 +13,7 @@
         transform: translateX(-50%);
         border-radius: 25px 25px 0 0;
     }
+
     &::before {
         content: "";
         position: absolute;
@@ -23,22 +25,25 @@
         left: 50%;
         transform: translateX(-50%);
     }
-&__intro {
-    margin-top: -194px;
-    p {
-        margin: 110px 0 215px 100px;
-        max-width: 30%;
+
+    &__intro {
+        margin-top: -194px;
+
+        p {
+            margin: 110px 0 215px 100px;
+            max-width: 30%;
+        }
     }
-}
 
 
     &__content {
         max-width: 100%;
         width: 632px;
 
-        &:nth-child(2n+1) {
+        &:nth-child(2n) {
             margin-left: 100px;
-            h5{
+
+            h5 {
                 &::after {
                     content: "";
                     position: absolute;
@@ -51,8 +56,9 @@
             }
         }
 
-        &:nth-child(2n) {
-            margin: 200px 100px 200px auto;
+        &:nth-child(2n+1) {
+            margin: 200px 100px 0 auto;
+            padding-bottom: 200px;
 
             h4 {
                 text-align: end;
@@ -60,6 +66,7 @@
 
             h5 {
                 text-align: end;
+
                 &::after {
                     content: "";
                     position: absolute;
@@ -72,9 +79,7 @@
             }
         }
 
-        // &:last-child {
-        //     margin-bottom: 755px;
-        // }
+
 
         h5 {
             padding: 20px 0;
@@ -86,15 +91,19 @@
             @include rem(21);
         }
     }
-    .cloud {
+
+    .cloud-left {
         position: absolute;
-        top: 0;
-        &:nth-child(2n) {
-            left: 0;
-            // padding-bottom: ;
-        }
-        &:nth-child(2n+1) {
-            right: 0;
-        }
+        top: 37%;
+        left: 0;
+
+    }
+    .cloud-right {
+        position: absolute;
+        right: 0;
+        top: 16%;
+            &:last-child {
+                top: 60%;
+            }
     }
 }
