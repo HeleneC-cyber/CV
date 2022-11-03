@@ -76,6 +76,60 @@ h1 {
   margin-bottom: 20px;
 }
 
+h2 {
+  font-family: "Antique olive";
+  font-size: 3.4375rem;
+  text-transform: uppercase;
+  color: #C6C09C;
+  margin-left: 100px;
+  position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+h2::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 50px;
+  background-color: #fae7e3;
+  left: -23px;
+  top: 25px;
+  z-index: -1;
+}
+
+h3 {
+  font-family: "Antique olive";
+  font-size: 3.4375rem;
+  text-transform: capitalize;
+  position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+h3::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 50px;
+  background-color: #fae7e3;
+  left: -44px;
+  top: 25px;
+  z-index: -1;
+}
+
+h4 {
+  font-family: "Antique olive";
+  color: #FFB284;
+  font-size: rem(34);
+}
+
+h5 {
+  font-family: "Antique olive";
+  color: #E79796;
+  font-size: rem(34);
+}
+
 p {
   font-family: "Rage";
   color: #443E1D;
@@ -135,7 +189,7 @@ a {
   background-image: url("../images/bg-home.png");
   background-repeat: no-repeat;
   width: 100%;
-  padding: 90px 0 550px;
+  padding: 90px 0 630px;
 }
 .hero__content {
   background-color: #FFFFFF;
@@ -183,4 +237,44 @@ a {
   left: 50%;
   transform: translateX(-50%);
   bottom: 70px;
+}
+
+.journey {
+  position: relative;
+}
+.journey::after {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 100%;
+  background-color: #C6C09C;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.journey > p {
+  margin: 110px 0 215px 100px;
+  max-width: 30%;
+}
+.journey__content {
+  max-width: 100%;
+  width: 632px;
+}
+.journey__content:nth-child(2n+1) {
+  margin-left: 100px;
+}
+.journey__content:nth-child(2n) {
+  margin: 50px 100px 300px auto;
+}
+.journey__content:nth-child(2n) h4 {
+  text-align: end;
+}
+.journey__content:nth-child(2n) h5 {
+  text-align: end;
+}
+.journey__content h5 {
+  padding: 20px 0;
+}
+.journey__content .text-green {
+  font-size: 1.3125rem;
 }/*# sourceMappingURL=main.css.map */

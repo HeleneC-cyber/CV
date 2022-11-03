@@ -1,0 +1,45 @@
+.journey {
+    position: relative;
+    &::after {
+        content: "";
+        position: absolute;
+        width: 30px;
+        height: 100%;
+        background-color: $color-007;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    >p {
+        margin: 110px 0 215px 100px;
+        max-width: 30%;
+    }
+    &__content {
+        max-width: 100%;
+        width: 632px;
+
+        &:nth-child(2n+1) {
+            margin-left: 100px;
+        }
+
+        &:nth-child(2n) {
+            margin: 50px 100px 300px auto;
+
+            h4 {
+                text-align: end;
+            }
+
+            h5 {
+                text-align: end;
+            }
+        }
+
+        h5 {
+            padding: 20px 0;
+        }
+
+        .text-green {
+            @include rem(21);
+        }
+    }
+}
