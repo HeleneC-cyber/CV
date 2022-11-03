@@ -62,6 +62,12 @@ body {
   font-size: 2.125rem;
 }
 
+.custom-container {
+  width: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
 @font-face {
   font-family: "Antique olive";
   src: url("./font/antique-olive/AQCT.ttf") format("truetype");
@@ -188,6 +194,7 @@ a {
 .hero {
   background-image: url("../images/bg-home.png");
   background-repeat: no-repeat;
+  background-size: cover;
   width: 100%;
   padding: 90px 0 630px;
 }
@@ -264,7 +271,10 @@ a {
   left: 50%;
   transform: translateX(-50%);
 }
-.journey > p {
+.journey__intro {
+  margin-top: -194px;
+}
+.journey__intro p {
   margin: 110px 0 215px 100px;
   max-width: 30%;
 }
@@ -285,7 +295,7 @@ a {
   left: 105%;
 }
 .journey__content:nth-child(2n) {
-  margin: 50px 100px 300px auto;
+  margin: 200px 100px 200px auto;
 }
 .journey__content:nth-child(2n) h4 {
   text-align: end;
@@ -302,15 +312,22 @@ a {
   border-radius: 0 25px 25px 0;
   right: 105%;
 }
-.journey__content:last-child {
-  padding-bottom: 755px;
-}
 .journey__content h5 {
   padding: 20px 0;
   position: relative;
 }
 .journey__content .text-green {
   font-size: 1.3125rem;
+}
+.journey .cloud {
+  position: absolute;
+  top: 0;
+}
+.journey .cloud:nth-child(2n) {
+  left: 0;
+}
+.journey .cloud:nth-child(2n+1) {
+  right: 0;
 }
 
 .transition {

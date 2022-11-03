@@ -5,3 +5,8 @@ body {
     font-family: $font-001;
     @include rem(34);
 }
+.custom-container {
+    width: 100%;
+    max-width: 1920px;
+    margin : 0 auto;
+}
