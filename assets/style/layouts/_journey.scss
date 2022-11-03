@@ -1,25 +1,51 @@
 .journey {
     position: relative;
+
     &::after {
         content: "";
         position: absolute;
         width: 30px;
-        height: 100%;
+        height: 86%;
         background-color: $color-007;
-        top: 0;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        border-radius: 25px 25px 0 0;
+    }
+    &::before {
+        content: "";
+        position: absolute;
+        width: 340px;
+        height: 100%;
+        background-image: url("../images/flower-big.svg");
+        background-repeat: no-repeat;
+        top: 9.5%;
         left: 50%;
         transform: translateX(-50%);
     }
+
     >p {
         margin: 110px 0 215px 100px;
         max-width: 30%;
     }
+
     &__content {
         max-width: 100%;
         width: 632px;
 
         &:nth-child(2n+1) {
             margin-left: 100px;
+            h5{
+                &::after {
+                    content: "";
+                    position: absolute;
+                    width: 200px;
+                    height: 30px;
+                    background-color: $color-007;
+                    border-radius: 25px 0 0 25px;
+                    left: 105%;
+                }
+            }
         }
 
         &:nth-child(2n) {
@@ -31,11 +57,27 @@
 
             h5 {
                 text-align: end;
+                &::after {
+                    content: "";
+                    position: absolute;
+                    width: 200px;
+                    height: 30px;
+                    background-color: $color-007;
+                    border-radius: 0 25px 25px 0;
+                    right: 105%;
+                }
             }
+        }
+
+        &:last-child {
+            padding-bottom: 755px;
+            ;
         }
 
         h5 {
             padding: 20px 0;
+            position: relative;
+
         }
 
         .text-green {
