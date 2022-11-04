@@ -1,0 +1,25 @@
+.experience {
+    .carrousel__wrapper {
+        display: flex;
+        margin-top: 240px;
+
+        .carrousel {
+            width: 50%;
+
+            .green-btn {
+                svg {
+                    path {
+                        fill: $color-007;
+                    }
+                }
+                &:hover {
+                    svg {
+                        path {
+                            fill: $color-005;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

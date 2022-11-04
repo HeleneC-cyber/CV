@@ -146,6 +146,12 @@ p {
   font-family: "Antique olive";
 }
 
+button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
 .btn {
   padding: 16px 30px;
   border-radius: 50px;
@@ -156,6 +162,39 @@ p {
 .btn:hover {
   background-color: #E79796;
   color: #FAE7E3;
+}
+
+.carrousel {
+  display: flex;
+  align-items: center;
+}
+.carrousel .carrousel-btn {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.carrousel .carrousel-btn:hover {
+  transition: all 0.4 ease-in-out;
+}
+.carrousel .carrousel-btn:hover svg path {
+  fill: #E79796;
+}
+.carrousel .prev-btn {
+  transform: rotate(180deg);
+}
+.carrousel .show {
+  width: 759px;
+  height: 754px;
+  overflow: hidden;
+  margin: 0 20px;
+}
+.carrousel .show .images {
+  display: flex;
+  transition: all 0.4s ease-in-out;
+}
+.carrousel .show .images .image {
+  width: 759px;
+  height: 754px;
 }
 
 nav {
@@ -365,4 +404,18 @@ a {
   right: 0;
   bottom: 100%;
   transform: rotateY(180deg);
+}
+
+.experience .carrousel__wrapper {
+  display: flex;
+  margin-top: 240px;
+}
+.experience .carrousel__wrapper .carrousel {
+  width: 50%;
+}
+.experience .carrousel__wrapper .carrousel .green-btn svg path {
+  fill: #C6C09C;
+}
+.experience .carrousel__wrapper .carrousel .green-btn:hover svg path {
+  fill: #FFB284;
 }/*# sourceMappingURL=main.css.map */
