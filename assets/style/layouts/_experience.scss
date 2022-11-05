@@ -51,3 +51,23 @@
     }
   }
 }
+
+.show {
+  .images {
+    .image {
+      position: relative;
+      .overlay {
+        display: none;
+        position: absolute;
+        inset: 0 0 0 0;
+        background-color: rgba($color: $color-003, $alpha: 0.9);
+      }
+      &:hover {
+        .overlay {
+          display: flex;
+          align-items: row;
+        }
+      }
+    }
+  }
+}

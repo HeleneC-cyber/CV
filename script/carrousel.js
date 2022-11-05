@@ -15,26 +15,69 @@ const content = [
   {
     src: "albedo",
     title: "Site Albedo",
-    paragraphe: "Réalisée à partir d'une maquette photoshop en ligne",
+    paragraphe: "Réalisé à partir d'une maquette photoshop en ligne",
     details: [
       "Langage html/css",
-      "Transition css",
+      "Transition et animation css",
       "Carrousel (à partir d'animation css)",
     ],
     icon: "link-solid",
     lien: "https://helenec-cyber.github.io/Site-albedo/",
-    index: 0,
   },
-  "digital-reality",
-  "esokia",
+  {
+    src: "digital-reality",
+    title: "Site Digital-Reality",
+    paragraphe: "Réalisé à partir d'une maquette test via photoshop",
+    details: [
+      "Langage html/css",
+      "Création de modal",
+      "Création d'un formulaire",
+    ],
+    icon: "link-solid",
+    lien: "https://helenec-cyber.github.io/Digital-reality/index.html",
+  },
+  {
+    src: "esokia",
+    title: "Site Esokia",
+    paragraphe: "Réalisé à partir d'une maquette photoshop d'entreprise",
+    details: [
+      "Langage html/css",
+      "flexbox",
+      "Liens cliquable et importation d'images",
+    ],
+    icon: "link-solid",
+    lien: "https://helenec-cyber.github.io/esokia/",
+  },
 ];
-const contentM = ["idealzen", "sophrologie"];
+
+const contentM = [
+  {
+    src: "idealzen",
+    title: "Maquette du site IdealZen",
+    paragraphe: "Réalisée sous le logiciel XD",
+    details: ["Maquette intéractive", "Palette de couleur et police défini"],
+    icon: "link-solid",
+    lien: "https://xd.adobe.com/view/52ca40fb-9864-4181-9b33-214dcddbeacb-0799/grid",
+  },
+  {
+    src: "sophrologie",
+    title: "Maquette du site de Sophrologie d'Isabelle Usclade",
+    paragraphe: "Réalisée sous le logiciel XD",
+    details: [
+      "Intéraction uniquement faisable depuis la page d'accueil ",
+      "Elément intéractif",
+      "Utilisation de composant",
+    ],
+    icon: "link-solid",
+    lien: "https://xd.adobe.com/view/e6215174-d1b5-4a1b-9680-077161a5c30a-b372/screen/5b19d054-60ed-4c5e-9280-e283ef681bd9/https://xd.adobe.com/view/52ca40fb-9864-4181-9b33-214dcddbeacb-0799/screen/21068e8e-b6db-455a-a24c-086f8d08a1c6?fullscreen&hints=off",
+  },
+];
 
 //variable pour slider intégration puis celui maquette
 let translate = 0;
 let translateM = 0;
 
-//Récupération des images en deux tableau : l'un intégration, l'autre maquette
+//Récupération des images (et propriétés des images) en deux tableau : l'un intégration, l'autre maquette
 window.addEventListener("DOMContentLoaded", () => {
   for (let image of content) {
     sliderI.innerHTML += `
@@ -43,27 +86,49 @@ window.addEventListener("DOMContentLoaded", () => {
             <div class="overlay">
                 <h6>${image.title} </h6>
                 <p>${image.paragraphe} </p>
-                <ul id="list-image-${image.index} " >
+                <ul class="list-image" >
                 </ul>
                 <a href="${image.lien}"><img src="./assets/images/${image.icon}.svg"/> </a>
             </div>
         </div>
         `;
-    let ul = document.getElementById("list-image-" + image.index);
-    for (let detail of image.details) {
-      ul.innerHTML += `
+    //Récupération de l'ul créée avec une classe "list-image". Deuxième boucle for permet de récupérer "detail" soit l'élément du tableau "details" de l'image (qui est un objet du tableau "content")
+    let ul = document.getElementsByClassName("list-image");
+    for (let i = 0; i < ul.length; i++) {
+      for (let detail of image.details) {
+        ul[i].innerHTML += `
         <li>${detail}</li>
         `;
+      }
     }
   }
+  //Mêmes boucles pour le deuxième tableau "contentM" soit pour le carrousel maquette.
   for (let image of contentM) {
     sliderM.innerHTML += `
         <div class="image">
-        <img src="./assets/images/caroussel-maquette/${image}.png" alt="">
-    </div>
+            <img src="./assets/images/caroussel-maquette/${image.src}.png" alt="">
+            <div class="overlay">
+                <h6>${image.title} </h6>
+                <p>${image.paragraphe} </p>
+                <ul class="list-image" >
+                </ul>
+                <a href="${image.lien}"><img src="./assets/images/${image.icon}.svg"/> </a>
+            </div>
+        </div>
         `;
+    let ul = document.getElementsByClassName("list-image");
+    for (let i = 0; i < ul.length; i++) {
+      if (image.details) {
+        for (let detail of image.details) {
+          ul[i].innerHTML += `
+        <li>${detail}</li>
+        `;
+        }
+      }
+    }
   }
 });
+
 //CARROUSEL INTEGRATION :
 //fonction au click pour le bouton précédent
 btnIP.addEventListener("click", () => {

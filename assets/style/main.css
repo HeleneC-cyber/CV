@@ -76,8 +76,12 @@ body {
   font-family: "Rage";
   src: url("./font/rage/RAGE.TTF") format("truetype");
 }
+@font-face {
+  font-family: "Montserrat";
+  src: url("./font/montserrat/Monserrat-VariableFont_wght.ttf") format("truetype");
+}
 h1 {
-  color: #E79796;
+  color: #e79796;
   font-size: 3.4375rem;
   margin-bottom: 20px;
 }
@@ -86,7 +90,7 @@ h2 {
   font-family: "Antique olive";
   font-size: 3.4375rem;
   text-transform: uppercase;
-  color: #C6C09C;
+  color: #c6c09c;
   margin-left: 100px;
   position: relative;
   width: -webkit-fit-content;
@@ -107,7 +111,7 @@ h2::after {
 h3 {
   font-family: "Antique olive";
   font-size: 3.4375rem;
-  color: #FFB284;
+  color: #ffb284;
   text-transform: capitalize;
   position: relative;
   width: -webkit-fit-content;
@@ -127,23 +131,29 @@ h3::after {
 
 h4 {
   font-family: "Antique olive";
-  color: #FFB284;
+  color: #ffb284;
   font-size: rem(34);
 }
 
 h5 {
   font-family: "Antique olive";
-  color: #E79796;
+  color: #e79796;
   font-size: rem(34);
 }
 
+h6 {
+  font-family: "Montserrat";
+  color: #ffffff;
+  font-size: rem(55);
+}
+
 p {
-  font-family: "Rage";
-  color: #443E1D;
+  font-family: "Montserrat";
+  color: #443e1d;
 }
 
 .text-green {
-  color: #C6C09C;
+  color: #c6c09c;
   font-family: "Antique olive";
 }
 
@@ -156,13 +166,13 @@ button {
 .btn {
   padding: 16px 30px;
   border-radius: 50px;
-  background-color: #C6C09C;
+  background-color: #c6c09c;
   cursor: pointer;
   transition: background-color 0.4s ease-in-out, color 0.4s ease-in-out;
 }
 .btn:hover {
-  background-color: #E79796;
-  color: #FAE7E3;
+  background-color: #e79796;
+  color: #fae7e3;
 }
 
 .carrousel {
@@ -178,7 +188,7 @@ button {
   transition: all 0.4 ease-in-out;
 }
 .carrousel .carrousel-btn:hover svg path {
-  fill: #E79796;
+  fill: #e79796;
 }
 .carrousel .prev-btn {
   transform: rotate(180deg);
@@ -200,7 +210,7 @@ button {
 
 nav {
   position: relative;
-  background-color: #F5CEC7;
+  background-color: #f5cec7;
   font-size: 34px;
   text-transform: uppercase;
   padding: 28px 50px;
@@ -212,7 +222,7 @@ nav::after {
   content: "";
   width: 50px;
   height: 370px;
-  background-color: #E79796;
+  background-color: #e79796;
   position: absolute;
   right: 0;
   top: 0;
@@ -228,7 +238,7 @@ li {
 }
 
 a {
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 .hero {
@@ -239,7 +249,7 @@ a {
   padding: 90px 0 630px;
 }
 .hero__content {
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   background-image: url("../images/blob-home.svg");
   background-repeat: no-repeat;
   background-position: right;
@@ -295,7 +305,7 @@ a {
   position: absolute;
   width: 30px;
   height: 86%;
-  background-color: #C6C09C;
+  background-color: #c6c09c;
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
@@ -331,7 +341,7 @@ a {
   position: absolute;
   width: 200px;
   height: 30px;
-  background-color: #C6C09C;
+  background-color: #c6c09c;
   border-radius: 25px 0 0 25px;
   left: 105%;
 }
@@ -350,7 +360,7 @@ a {
   position: absolute;
   width: 200px;
   height: 30px;
-  background-color: #C6C09C;
+  background-color: #c6c09c;
   border-radius: 0 25px 25px 0;
   right: 105%;
 }
@@ -385,7 +395,7 @@ a {
   text-align: center;
 }
 .transition p {
-  color: #FFFFFF;
+  color: #ffffff;
   font-family: "Antique olive";
 }
 .transition::before {
@@ -413,10 +423,10 @@ a {
   margin-top: 240px;
 }
 .experience .carrousel__wrapper .carousel-title .carrousel .green-btn svg path {
-  fill: #C6C09C;
+  fill: #c6c09c;
 }
 .experience .carrousel__wrapper .carousel-title .carrousel .green-btn:hover svg path {
-  fill: #FFB284;
+  fill: #ffb284;
 }
 .experience .carrousel__wrapper .carousel-title .carrousel-integration {
   position: relative;
@@ -442,5 +452,19 @@ a {
   margin: 61px auto 0;
 }
 .experience .carrousel__wrapper .carousel-title h3.maquette-title {
-  color: #E79796;
+  color: #e79796;
+}
+
+.show .images .image {
+  position: relative;
+}
+.show .images .image .overlay {
+  display: none;
+  position: absolute;
+  inset: 0 0 0 0;
+  background-color: rgba(245, 206, 199, 0.9);
+}
+.show .images .image:hover .overlay {
+  display: flex;
+  align-items: row;
 }/*# sourceMappingURL=main.css.map */
