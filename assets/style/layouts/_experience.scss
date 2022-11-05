@@ -1,25 +1,53 @@
 .experience {
-    .carrousel__wrapper {
-        display: flex;
-        margin-top: 240px;
-
-        .carrousel {
-            width: 50%;
-
-            .green-btn {
-                svg {
-                    path {
-                        fill: $color-007;
-                    }
-                }
-                &:hover {
-                    svg {
-                        path {
-                            fill: $color-005;
-                        }
-                    }
-                }
+  .carrousel__wrapper {
+    display: flex;
+    margin-top: 240px;
+    .carousel-title {
+      .carrousel {
+        .green-btn {
+          svg {
+            path {
+              fill: $color-007;
             }
+          }
+
+          &:hover {
+            svg {
+              path {
+                fill: $color-005;
+              }
+            }
+          }
         }
+        &-integration {
+          position: relative;
+
+          > svg {
+            position: absolute;
+            bottom: 165px;
+            right: 0;
+            z-index: -1;
+            height: 100%;
+          }
+        }
+        &-maquette {
+          position: relative;
+
+          > svg {
+            position: absolute;
+            top: 289px;
+            left: 0;
+            z-index: -1;
+            height: 100%;
+          }
+        }
+      }
+      h3 {
+        margin: 61px auto 0;
+        &.maquette-title {
+          color: $color-004;
+        }
+      }
     }
+  }
 }

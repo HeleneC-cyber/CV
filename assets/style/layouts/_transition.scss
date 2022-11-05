@@ -1,31 +1,32 @@
 .transition {
-    position: relative;
-    background-image: url("../images/transition-journey.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    padding: 190px 0 515px 0;
-    text-align: center;
-    p {
-        color: $color-white;
-        font-family: $font-001;
-    }
-    &::before {
-        content: "";
-        position : absolute;
-        width: 805px;
-        height: 425px;
-        background-image: url("../images/hill.svg");
-        left: 0;
-        bottom: 100%;
-    }
-    &::after {
-        content: "";
-        position : absolute;
-        width: 805px;
-        height: 425px;
-        background-image: url("../images/hill.svg");
-        right: 0;
-        bottom: 100%;
-        transform: rotateY(180deg);
-    }
+  position: relative;
+  background-image: url("../images/transition-journey.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 190px 0 515px 0;
+  margin-bottom: 100px;
+  text-align: center;
+  p {
+    color: $color-white;
+    font-family: $font-001;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    width: 805px;
+    height: 425px;
+    background-image: url("../images/hill.svg");
+    left: 0;
+    bottom: 100%;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    width: 805px;
+    height: 425px;
+    background-image: url("../images/hill.svg");
+    right: 0;
+    bottom: 100%;
+    transform: rotateY(180deg);
+  }
 }
