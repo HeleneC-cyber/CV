@@ -1,109 +1,104 @@
 .journey {
-    position: relative;
-    padding-bottom: 755px;
+  position: relative;
+  padding-bottom: 755px;
 
-    &::after {
-        content: "";
-        position: absolute;
-        width: 30px;
-        height: 86%;
-        background-color: $color-007;
-        bottom: 0;
-        left: 50%;
-        transform: translateX(-50%);
-        border-radius: 25px 25px 0 0;
+  &::after {
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 86%;
+    background-color: $color-007;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 25px 25px 0 0;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 340px;
+    height: 100%;
+    background-image: url("../images/flower-big.svg");
+    background-repeat: no-repeat;
+    top: 9.5%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  &__intro {
+    margin-top: -194px;
+
+    p {
+      margin: 110px 0 215px 100px;
+      max-width: 30%;
     }
+  }
 
-    &::before {
-        content: "";
-        position: absolute;
-        width: 340px;
-        height: 100%;
-        background-image: url("../images/flower-big.svg");
-        background-repeat: no-repeat;
-        top: 9.5%;
-        left: 50%;
-        transform: translateX(-50%);
-    }
+  &__content {
+    max-width: 100%;
+    width: 632px;
 
-    &__intro {
-        margin-top: -194px;
+    &:nth-child(2n) {
+      margin-left: 100px;
 
-        p {
-            margin: 110px 0 215px 100px;
-            max-width: 30%;
+      h5 {
+        &::after {
+          content: "";
+          position: absolute;
+          width: 200px;
+          height: 30px;
+          background-color: $color-007;
+          border-radius: 25px 0 0 25px;
+          left: 105%;
         }
+      }
     }
 
+    &:nth-child(2n + 1) {
+      margin: 200px 100px 0 auto;
+      padding-bottom: 200px;
 
-    &__content {
-        max-width: 100%;
-        width: 632px;
+      h4 {
+        text-align: end;
+      }
 
-        &:nth-child(2n) {
-            margin-left: 100px;
+      h5 {
+        text-align: end;
 
-            h5 {
-                &::after {
-                    content: "";
-                    position: absolute;
-                    width: 200px;
-                    height: 30px;
-                    background-color: $color-007;
-                    border-radius: 25px 0 0 25px;
-                    left: 105%;
-                }
-            }
+        &::after {
+          content: "";
+          position: absolute;
+          width: 200px;
+          height: 30px;
+          background-color: $color-007;
+          border-radius: 0 25px 25px 0;
+          right: 105%;
         }
-
-        &:nth-child(2n+1) {
-            margin: 200px 100px 0 auto;
-            padding-bottom: 200px;
-
-            h4 {
-                text-align: end;
-            }
-
-            h5 {
-                text-align: end;
-
-                &::after {
-                    content: "";
-                    position: absolute;
-                    width: 200px;
-                    height: 30px;
-                    background-color: $color-007;
-                    border-radius: 0 25px 25px 0;
-                    right: 105%;
-                }
-            }
-        }
-
-
-
-        h5 {
-            padding: 20px 0;
-            position: relative;
-
-        }
-
-        .text-green {
-            @include rem(21);
-        }
+      }
     }
 
-    .cloud-left {
-        position: absolute;
-        top: 37%;
-        left: 0;
+    h5 {
+      padding: 20px 0;
+      position: relative;
+    }
 
+    .text-green {
+      @include rem(21);
     }
-    .cloud-right {
-        position: absolute;
-        right: 0;
-        top: 16%;
-            &:last-child {
-                top: 60%;
-            }
+  }
+
+  .cloud-left {
+    position: absolute;
+    top: 37%;
+    left: 0;
+  }
+  .cloud-right {
+    position: absolute;
+    right: 0;
+    top: 16%;
+    &:last-child {
+      top: 60%;
     }
+  }
 }

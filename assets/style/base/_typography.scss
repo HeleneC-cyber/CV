@@ -62,17 +62,18 @@ h3 {
 h4 {
   font-family: $font-001;
   color: $color-005;
-  font-size: rem(34);
+  @include rem(34);
 }
 h5 {
   font-family: $font-001;
   color: $color-004;
-  font-size: rem(34);
+  @include rem(34);
 }
 h6 {
-  font-family: "Montserrat";
+  font-family: $font-001;
   color: $color-white;
-  font-size: rem(55);
+  @include rem(55);
+  text-align: center;
 }
 p {
   font-family: $font-002;

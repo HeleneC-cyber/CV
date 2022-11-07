@@ -1,37 +1,35 @@
 .carrousel {
-    display: flex;
-    align-items: center;
-    .carrousel-btn {
-        height: fit-content;
-        &:hover {
-            transition: all 0.4 ease-in-out;
-            svg {
-                path {
-                    fill: $color-004;
-                }
-            }
+  display: flex;
+  align-items: center;
+  .carrousel-btn {
+    height: fit-content;
+    &:hover {
+      transition: all 0.4 ease-in-out;
+      svg {
+        path {
+          fill: $color-004;
         }
+      }
     }
-    .prev-btn {
-        transform: rotate(180deg);
-    }
+  }
+  .prev-btn {
+    transform: rotate(180deg);
+  }
 
-    .show {
+  .show {
+    width: 759px;
+    height: 754px;
+    overflow: hidden;
+    margin: 0 20px;
+
+    .images {
+      display: flex;
+      transition: all 0.4s ease-in-out;
+
+      .image {
         width: 759px;
         height: 754px;
-        overflow: hidden;
-        margin: 0 20px;
-
-        .images {
-            display: flex;
-            transition: all 0.4s ease-in-out;
-
-            .image {
-                width: 759px;
-                height: 754px;
-
-            }
-        }
+      }
     }
-
+  }
 }

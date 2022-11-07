@@ -132,23 +132,24 @@ h3::after {
 h4 {
   font-family: "Antique olive";
   color: #ffb284;
-  font-size: rem(34);
+  font-size: 2.125rem;
 }
 
 h5 {
   font-family: "Antique olive";
   color: #e79796;
-  font-size: rem(34);
+  font-size: 2.125rem;
 }
 
 h6 {
-  font-family: "Montserrat";
+  font-family: "Antique olive";
   color: #ffffff;
-  font-size: rem(55);
+  font-size: 3.4375rem;
+  text-align: center;
 }
 
 p {
-  font-family: "Montserrat";
+  font-family: "Rage";
   color: #443e1d;
 }
 
@@ -454,6 +455,11 @@ a {
 .experience .carrousel__wrapper .carousel-title h3.maquette-title {
   color: #e79796;
 }
+.experience > p {
+  margin: 270px auto 317px;
+  max-width: 50%;
+  text-align: center;
+}
 
 .show .images .image {
   position: relative;
@@ -464,7 +470,43 @@ a {
   inset: 0 0 0 0;
   background-color: rgba(245, 206, 199, 0.9);
 }
+.show .images .image .overlay h6 {
+  margin-top: 60px;
+}
+.show .images .image .overlay p {
+  font-family: "Montserrat";
+  font-size: 1.625rem;
+  color: #ffffff;
+  font-weight: bold;
+  margin: 50px auto 30px;
+  max-width: 80%;
+  text-align: center;
+}
+.show .images .image .overlay ul {
+  display: flex;
+  flex-direction: column;
+}
+.show .images .image .overlay ul li {
+  position: relative;
+  font-family: "Montserrat";
+  font-size: 1.625rem;
+  font-weight: bold;
+  color: #ffffff;
+  padding-left: 120px;
+  max-width: 75%;
+}
+.show .images .image .overlay ul li::before {
+  content: "";
+  position: absolute;
+  width: 17px;
+  height: 17px;
+  background-color: #ffffff;
+  border-radius: 25px;
+  top: 6px;
+  left: 95px;
+}
 .show .images .image:hover .overlay {
   display: flex;
-  align-items: row;
+  flex-direction: column;
+  align-items: center;
 }/*# sourceMappingURL=main.css.map */

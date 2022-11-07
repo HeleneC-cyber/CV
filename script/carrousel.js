@@ -79,23 +79,23 @@ let translateM = 0;
 
 //Récupération des images (et propriétés des images) en deux tableau : l'un intégration, l'autre maquette
 window.addEventListener("DOMContentLoaded", () => {
-  for (let image of content) {
+  for (let v = 0; v < content.length; v++) {
     sliderI.innerHTML += `
         <div class="image">
-            <img src="./assets/images/caroussel-integration/${image.src}.png" alt="">
+            <img src="./assets/images/caroussel-integration/${content[v].src}.png" alt="">
             <div class="overlay">
-                <h6>${image.title} </h6>
-                <p>${image.paragraphe} </p>
+                <h6>${content[v].title} </h6>
+                <p>${content[v].paragraphe} </p>
                 <ul class="list-image" >
                 </ul>
-                <a href="${image.lien}"><img src="./assets/images/${image.icon}.svg"/> </a>
+                <a href="${content[v].lien}"><img src="./assets/images/${content[v].icon}.svg"/> </a>
             </div>
         </div>
         `;
     //Récupération de l'ul créée avec une classe "list-image". Deuxième boucle for permet de récupérer "detail" soit l'élément du tableau "details" de l'image (qui est un objet du tableau "content")
     let ul = document.getElementsByClassName("list-image");
     for (let i = 0; i < ul.length; i++) {
-      for (let detail of image.details) {
+      for (let detail of content[v].details) {
         ul[i].innerHTML += `
         <li>${detail}</li>
         `;
@@ -103,23 +103,23 @@ window.addEventListener("DOMContentLoaded", () => {
     }
   }
   //Mêmes boucles pour le deuxième tableau "contentM" soit pour le carrousel maquette.
-  for (let image of contentM) {
+  for (let w = 0; w < contentM.length; w++) {
     sliderM.innerHTML += `
         <div class="image">
-            <img src="./assets/images/caroussel-maquette/${image.src}.png" alt="">
+            <img src="./assets/images/caroussel-maquette/${contentM[w].src}.png" alt="">
             <div class="overlay">
-                <h6>${image.title} </h6>
-                <p>${image.paragraphe} </p>
+                <h6>${contentM[w].title} </h6>
+                <p>${contentM[w].paragraphe} </p>
                 <ul class="list-image" >
                 </ul>
-                <a href="${image.lien}"><img src="./assets/images/${image.icon}.svg"/> </a>
+                <a href="${contentM[w].lien}"><img src="./assets/images/${contentM[w].icon}.svg"/> </a>
             </div>
         </div>
         `;
     let ul = document.getElementsByClassName("list-image");
     for (let i = 0; i < ul.length; i++) {
-      if (image.details) {
-        for (let detail of image.details) {
+      if (contentM[w].details) {
+        for (let detail of contentM[w].details) {
           ul[i].innerHTML += `
         <li>${detail}</li>
         `;
