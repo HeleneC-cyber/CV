@@ -1,7 +1,9 @@
 .experience {
   .carrousel__wrapper {
     display: flex;
-    margin-top: 240px;
+    margin: 240px auto 0;
+    width: 1920px;
+
     .carousel-title {
       .carrousel {
         .green-btn {
@@ -81,14 +83,16 @@
         ul {
           display: flex;
           flex-direction: column;
+          margin-bottom: 30px;
+          align-items: flex-start;
+          align-self: flex-start;
           li {
             position: relative;
             font-family: $font-003;
             @include rem(26);
             font-weight: bold;
             color: $color-white;
-            padding-left: 120px;
-            max-width: 75%;
+            padding: 0 20px 0 120px;
             &::before {
               content: "";
               position: absolute;
@@ -97,7 +101,7 @@
               background-color: $color-white;
               border-radius: 25px;
               top: 6px;
-              left: 95px;
+              left: 90px;
             }
           }
         }

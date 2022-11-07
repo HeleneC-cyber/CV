@@ -68,6 +68,10 @@ body {
   margin: 0 auto;
 }
 
+a {
+  color: #ffffff;
+}
+
 @font-face {
   font-family: "Antique olive";
   src: url("./font/antique-olive/AQCT.ttf") format("truetype");
@@ -198,7 +202,7 @@ button {
   width: 759px;
   height: 754px;
   overflow: hidden;
-  margin: 0 20px;
+  margin: 0 10px;
 }
 .carrousel .show .images {
   display: flex;
@@ -228,18 +232,12 @@ nav::after {
   right: 0;
   top: 0;
 }
-
-ul {
+nav ul {
   display: flex;
   justify-content: space-around;
 }
-
-li {
+nav ul li {
   padding: 0 50px 0 0;
-}
-
-a {
-  color: #ffffff;
 }
 
 .hero {
@@ -421,7 +419,8 @@ a {
 
 .experience .carrousel__wrapper {
   display: flex;
-  margin-top: 240px;
+  margin: 240px auto 0;
+  width: 1920px;
 }
 .experience .carrousel__wrapper .carousel-title .carrousel .green-btn svg path {
   fill: #c6c09c;
@@ -485,6 +484,9 @@ a {
 .show .images .image .overlay ul {
   display: flex;
   flex-direction: column;
+  margin-bottom: 30px;
+  align-items: flex-start;
+  align-self: flex-start;
 }
 .show .images .image .overlay ul li {
   position: relative;
@@ -492,8 +494,7 @@ a {
   font-size: 1.625rem;
   font-weight: bold;
   color: #ffffff;
-  padding-left: 120px;
-  max-width: 75%;
+  padding: 0 20px 0 120px;
 }
 .show .images .image .overlay ul li::before {
   content: "";
@@ -503,10 +504,111 @@ a {
   background-color: #ffffff;
   border-radius: 25px;
   top: 6px;
-  left: 95px;
+  left: 90px;
 }
 .show .images .image:hover .overlay {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.resume {
+  background-image: url("../images/bg-resume.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 2560px;
+}
+.resume__container {
+  padding-top: 1141px;
+}
+.resume__container .resume-en-resume {
+  position: relative;
+  background-color: #ffffff;
+  border-radius: 0 50px 0 0;
+  max-width: 960px;
+  height: 1290px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  padding: 130px 0 0 0;
+}
+.resume__container .resume-en-resume::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 371px;
+  background-color: #ffb284;
+}
+.resume__container .resume-en-resume::after {
+  content: "";
+  position: absolute;
+  background-image: url("../images/hill.svg");
+  width: 805px;
+  height: 425px;
+  bottom: 0;
+  left: 0;
+}
+.resume__container .resume-en-resume h2 {
+  z-index: 1;
+}
+.resume__container .resume-en-resume .resume-ul {
+  padding: 108px 0 0 199px;
+  font-family: "Rage";
+  font-size: 2.125rem;
+}
+.resume__container .resume-en-resume .resume-ul .resume-list {
+  padding-bottom: 20px;
+  position: relative;
+}
+.resume__container .resume-en-resume .resume-ul .resume-list::before {
+  content: "";
+  position: absolute;
+  background-image: url("../images/bullet-flower.svg");
+  top: 0px;
+  left: -80px;
+  width: 63px;
+  height: 31px;
+}
+.resume__container .resume-en-resume .resume-ul .resume-list .ul-description {
+  font-family: "Antique olive";
+  font-size: 2.125rem;
+  color: #e79796;
+  padding: 0 0 0 210px;
+}
+.resume__container .resume-en-resume .resume-ul .resume-list .ul-description .li-description:not(:last-child) {
+  padding-bottom: 20px;
+}
+.resume__container .resume-en-resume .resume-ul .resume-list .ul-description .full {
+  position: relative;
+}
+.resume__container .resume-en-resume .resume-ul .resume-list .ul-description .full::after {
+  content: "";
+  position: absolute;
+  background-image: url("../images/svg-cursor/cursor-full.svg");
+  width: 163px;
+  height: 30px;
+  right: 150px;
+}
+.resume__container .resume-en-resume .resume-ul .resume-list .ul-description .almost {
+  position: relative;
+}
+.resume__container .resume-en-resume .resume-ul .resume-list .ul-description .almost::after {
+  content: "";
+  position: absolute;
+  background-image: url("../images/svg-cursor/cursor-almost.svg");
+  width: 163px;
+  height: 30px;
+  right: 150px;
+}
+.resume__container .resume-en-resume .resume-ul .resume-list .ul-description .quite {
+  position: relative;
+}
+.resume__container .resume-en-resume .resume-ul .resume-list .ul-description .quite::after {
+  content: "";
+  position: absolute;
+  background-image: url("../images/svg-cursor/cursor-quite.svg");
+  width: 163px;
+  height: 30px;
+  right: 150px;
 }/*# sourceMappingURL=main.css.map */

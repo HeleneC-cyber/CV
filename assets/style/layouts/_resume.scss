@@ -1,0 +1,101 @@
+.resume {
+  background-image: url("../images/bg-resume.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 2560px;
+  &__container {
+    padding-top: 1141px;
+    .resume-en-resume {
+      position: relative;
+      background-color: $color-white;
+      border-radius: 0 50px 0 0;
+      max-width: 960px;
+      height: calc(1420px - 130px);
+      object-fit: contain;
+      padding: 130px 0 0 0;
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 50px;
+        height: 371px;
+        background-color: $color-005;
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        background-image: url("../images/hill.svg");
+        width: 805px;
+        height: 425px;
+        bottom: 0;
+        left: 0;
+      }
+
+      h2 {
+        z-index: 1;
+      }
+      .resume-ul {
+        padding: 108px 0 0 199px;
+        font-family: $font-002;
+        @include rem(34);
+        .resume-list {
+          padding-bottom: 20px;
+          position: relative;
+          &::before {
+            content: "";
+            position: absolute;
+            background-image: url("../images/bullet-flower.svg");
+            top: 0px;
+            left: -80px;
+            width: 63px;
+            height: 31px;
+          }
+          .ul-description {
+            font-family: $font-001;
+            @include rem(34);
+            color: $color-004;
+            padding: 0 0 0 calc(403px - 130px - 63px);
+            .li-description:not(:last-child) {
+              padding-bottom: 20px;
+            }
+            .full {
+              position: relative;
+              &::after {
+                content: "";
+                position: absolute;
+                background-image: url("../images/svg-cursor/cursor-full.svg");
+                width: 163px;
+                height: 30px;
+                right: 150px;
+              }
+            }
+            .almost {
+              position: relative;
+              &::after {
+                content: "";
+                position: absolute;
+                background-image: url("../images/svg-cursor/cursor-almost.svg");
+                width: 163px;
+                height: 30px;
+                right: 150px;
+              }
+            }
+
+            .quite {
+              position: relative;
+              &::after {
+                content: "";
+                position: absolute;
+                background-image: url("../images/svg-cursor/cursor-quite.svg");
+                width: 163px;
+                height: 30px;
+                right: 150px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

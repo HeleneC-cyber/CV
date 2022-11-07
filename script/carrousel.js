@@ -23,6 +23,7 @@ const content = [
     ],
     icon: "link-solid",
     lien: "https://helenec-cyber.github.io/Site-albedo/",
+    index: 0,
   },
   {
     src: "digital-reality",
@@ -35,6 +36,7 @@ const content = [
     ],
     icon: "link-solid",
     lien: "https://helenec-cyber.github.io/Digital-reality/index.html",
+    index: 1,
   },
   {
     src: "esokia",
@@ -47,6 +49,7 @@ const content = [
     ],
     icon: "link-solid",
     lien: "https://helenec-cyber.github.io/esokia/",
+    index: 2,
   },
 ];
 
@@ -58,6 +61,7 @@ const contentM = [
     details: ["Maquette intéractive", "Palette de couleur et police défini"],
     icon: "link-solid",
     lien: "https://xd.adobe.com/view/52ca40fb-9864-4181-9b33-214dcddbeacb-0799/grid",
+    tartampion: 80,
   },
   {
     src: "sophrologie",
@@ -70,6 +74,7 @@ const contentM = [
     ],
     icon: "link-solid",
     lien: "https://xd.adobe.com/view/e6215174-d1b5-4a1b-9680-077161a5c30a-b372/screen/5b19d054-60ed-4c5e-9280-e283ef681bd9/https://xd.adobe.com/view/52ca40fb-9864-4181-9b33-214dcddbeacb-0799/screen/21068e8e-b6db-455a-a24c-086f8d08a1c6?fullscreen&hints=off",
+    tartampion: 81,
   },
 ];
 
@@ -86,44 +91,47 @@ window.addEventListener("DOMContentLoaded", () => {
             <div class="overlay">
                 <h6>${content[v].title} </h6>
                 <p>${content[v].paragraphe} </p>
-                <ul class="list-image" >
+                <ul id="ul-${content[v].index}" >
                 </ul>
-                <a href="${content[v].lien}"><img src="./assets/images/${content[v].icon}.svg"/> </a>
+                <a target="_blank" href="${content[v].lien}"><img src="./assets/images/${content[v].icon}.svg"/> </a>
             </div>
         </div>
         `;
     //Récupération de l'ul créée avec une classe "list-image". Deuxième boucle for permet de récupérer "detail" soit l'élément du tableau "details" de l'image (qui est un objet du tableau "content")
-    let ul = document.getElementsByClassName("list-image");
-    for (let i = 0; i < ul.length; i++) {
-      for (let detail of content[v].details) {
-        ul[i].innerHTML += `
+    let ul = document.getElementById("ul-" + content[v].index);
+    if (content[v].details) {
+      for (detail of content[v].details) {
+        ul.innerHTML += `
         <li>${detail}</li>
         `;
       }
     }
   }
+
   //Mêmes boucles pour le deuxième tableau "contentM" soit pour le carrousel maquette.
   for (let w = 0; w < contentM.length; w++) {
+    console.log(contentM.length);
     sliderM.innerHTML += `
         <div class="image">
             <img src="./assets/images/caroussel-maquette/${contentM[w].src}.png" alt="">
             <div class="overlay">
                 <h6>${contentM[w].title} </h6>
                 <p>${contentM[w].paragraphe} </p>
-                <ul class="list-image" >
+                <ul id="ulM-${contentM[w].tartampion}" >
                 </ul>
-                <a href="${contentM[w].lien}"><img src="./assets/images/${contentM[w].icon}.svg"/> </a>
+                <a target="_blank" href="${contentM[w].lien}"><img src="./assets/images/${contentM[w].icon}.svg"/> </a>
             </div>
         </div>
         `;
-    let ul = document.getElementsByClassName("list-image");
-    for (let i = 0; i < ul.length; i++) {
-      if (contentM[w].details) {
-        for (let detail of contentM[w].details) {
-          ul[i].innerHTML += `
-        <li>${detail}</li>
-        `;
-        }
+
+    let ulM = document.getElementById("ulM-" + contentM[w].tartampion);
+
+    if (contentM[w].details) {
+      for (detail of contentM[w].details) {
+        console.log(detail);
+        ulM.innerHTML += `
+          <li>${detail}</li>
+          `;
       }
     }
   }
