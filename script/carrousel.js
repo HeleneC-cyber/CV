@@ -73,7 +73,7 @@ const contentM = [
       "Utilisation de composant",
     ],
     icon: "link-solid",
-    lien: "https://xd.adobe.com/view/e6215174-d1b5-4a1b-9680-077161a5c30a-b372/screen/5b19d054-60ed-4c5e-9280-e283ef681bd9/https://xd.adobe.com/view/52ca40fb-9864-4181-9b33-214dcddbeacb-0799/screen/21068e8e-b6db-455a-a24c-086f8d08a1c6?fullscreen&hints=off",
+    lien: "https://xd.adobe.com/view/e6215174-d1b5-4a1b-9680-077161a5c30a-b372/",
     tartampion: 81,
   },
 ];

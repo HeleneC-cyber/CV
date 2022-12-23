@@ -1,11 +1,16 @@
 .experience {
+  position: relative;
   .carrousel__wrapper {
     display: flex;
+    //Problème de marge inexistante sur le rendu... (dans html changement des svg chevron width 71 --> width 60 de même dans view)
     margin: 240px auto 0;
     width: 1920px;
 
     .carousel-title {
       .carrousel {
+        .carrousel-btn {
+          padding: 0;
+        }
         .green-btn {
           svg {
             path {
@@ -56,6 +61,16 @@
     margin: 270px auto 317px;
     max-width: 50%;
     text-align: center;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    background-image: url("../images/cloud-medium.svg");
+    background-repeat: no-repeat;
+    top: 109%;
+    right: 0;
+    width: 323px;
+    height: 328px;
   }
 }
 

@@ -4,12 +4,37 @@
   background-size: cover;
   height: 2560px;
   &__container {
+    display: flex;
+    position: relative;
     padding-top: 1141px;
+    justify-content: space-between;
+    &::before {
+      content: "";
+      position: absolute;
+      background-image: url("../images/cloud-big.svg");
+      background-repeat: no-repeat;
+      bottom: 87%;
+      left: 0;
+      width: 587px;
+      height: 596px;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      background-image: url("../images/cloud.svg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      top: 4%;
+      left: 46%;
+      width: 299px;
+      height: 186px;
+      transform: rotate(-5deg);
+    }
     .resume-en-resume {
       position: relative;
       background-color: $color-white;
       border-radius: 0 50px 0 0;
-      max-width: 960px;
+      width: 970px;
       height: calc(1420px - 130px);
       object-fit: contain;
       padding: 130px 0 0 0;
@@ -96,6 +121,16 @@
           }
         }
       }
+    }
+    .resume-contact {
+      position: relative;
+      background-color: $color-white;
+      border-radius: 50px 0 0 0;
+      max-width: 781px;
+      height: calc(695px - 130px);
+      object-fit: contain;
+      padding: 130px 0 0 0;
+      margin-top: 725px;
     }
   }
 }

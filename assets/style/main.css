@@ -417,10 +417,16 @@ nav ul li {
   transform: rotateY(180deg);
 }
 
+.experience {
+  position: relative;
+}
 .experience .carrousel__wrapper {
   display: flex;
   margin: 240px auto 0;
   width: 1920px;
+}
+.experience .carrousel__wrapper .carousel-title .carrousel .carrousel-btn {
+  padding: 0;
 }
 .experience .carrousel__wrapper .carousel-title .carrousel .green-btn svg path {
   fill: #c6c09c;
@@ -458,6 +464,16 @@ nav ul li {
   margin: 270px auto 317px;
   max-width: 50%;
   text-align: center;
+}
+.experience::after {
+  content: "";
+  position: absolute;
+  background-image: url("../images/cloud-medium.svg");
+  background-repeat: no-repeat;
+  top: 109%;
+  right: 0;
+  width: 323px;
+  height: 328px;
 }
 
 .show .images .image {
@@ -519,13 +535,38 @@ nav ul li {
   height: 2560px;
 }
 .resume__container {
+  display: flex;
+  position: relative;
   padding-top: 1141px;
+  justify-content: space-between;
+}
+.resume__container::before {
+  content: "";
+  position: absolute;
+  background-image: url("../images/cloud-big.svg");
+  background-repeat: no-repeat;
+  bottom: 87%;
+  left: 0;
+  width: 587px;
+  height: 596px;
+}
+.resume__container::after {
+  content: "";
+  position: absolute;
+  background-image: url("../images/cloud.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  top: 4%;
+  left: 46%;
+  width: 299px;
+  height: 186px;
+  transform: rotate(-5deg);
 }
 .resume__container .resume-en-resume {
   position: relative;
   background-color: #ffffff;
   border-radius: 0 50px 0 0;
-  max-width: 960px;
+  width: 970px;
   height: 1290px;
   -o-object-fit: contain;
      object-fit: contain;
@@ -611,4 +652,15 @@ nav ul li {
   width: 163px;
   height: 30px;
   right: 150px;
+}
+.resume__container .resume-contact {
+  position: relative;
+  background-color: #ffffff;
+  border-radius: 50px 0 0 0;
+  max-width: 781px;
+  height: 565px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  padding: 130px 0 0 0;
+  margin-top: 725px;
 }/*# sourceMappingURL=main.css.map */
