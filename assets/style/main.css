@@ -342,7 +342,7 @@ nav ul li {
   height: 30px;
   background-color: #c6c09c;
   border-radius: 25px 0 0 25px;
-  left: 105%;
+  left: 102%;
 }
 .journey__content:nth-child(2n+1) {
   margin: 200px 100px 0 auto;
@@ -361,7 +361,7 @@ nav ul li {
   height: 30px;
   background-color: #c6c09c;
   border-radius: 0 25px 25px 0;
-  right: 105%;
+  right: 102%;
 }
 .journey__content h5 {
   padding: 20px 0;
@@ -423,10 +423,9 @@ nav ul li {
 .experience .carrousel__wrapper {
   display: flex;
   margin: 240px auto 0;
-  width: 1920px;
-}
-.experience .carrousel__wrapper .carousel-title .carrousel .carrousel-btn {
-  padding: 0;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 .experience .carrousel__wrapper .carousel-title .carrousel .green-btn svg path {
   fill: #c6c09c;
@@ -565,7 +564,7 @@ nav ul li {
 .resume__container .resume-en-resume {
   position: relative;
   background-color: #ffffff;
-  border-radius: 0 50px 0 0;
+  border-radius: 0 100px 0 0;
   width: 970px;
   height: 1290px;
   -o-object-fit: contain;
@@ -656,11 +655,152 @@ nav ul li {
 .resume__container .resume-contact {
   position: relative;
   background-color: #ffffff;
-  border-radius: 50px 0 0 0;
+  border-radius: 100px 0 0 0;
   max-width: 781px;
-  height: 565px;
+  height: 635px;
   -o-object-fit: contain;
      object-fit: contain;
-  padding: 130px 0 0 0;
+  padding: 60px 98px 0 0;
   margin-top: 725px;
+}
+.resume__container .resume-contact::before {
+  content: "";
+  position: absolute;
+  background-image: url("../images/bell-solid.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 81px;
+  height: 93px;
+  transform: rotate(-30deg);
+  top: 40px;
+  left: 40px;
+}
+.resume__container .resume-contact::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50px;
+  height: 371px;
+  background-color: #ffb284;
+}
+.resume__container .resume-contact h2 {
+  z-index: 1;
+  color: #ffb284;
+  text-transform: none;
+  position: relative;
+  margin-left: 180px;
+}
+.resume__container .resume-contact ul {
+  padding: 83px 0 0 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.resume__container .resume-contact ul .li-contact {
+  color: #f5cec7;
+  text-align: end;
+  padding-bottom: 20px;
+}
+.resume__container .resume-contact ul .li-contact:nth-child(1) {
+  position: relative;
+}
+.resume__container .resume-contact ul .li-contact:nth-child(1)::before {
+  content: "";
+  position: absolute;
+  background-image: url("../images/svg-contact/phone-solid.svg");
+  width: 32px;
+  height: 32px;
+  top: 0;
+  right: 105%;
+}
+.resume__container .resume-contact ul .li-contact:nth-child(2) {
+  max-width: 70%;
+  position: relative;
+}
+.resume__container .resume-contact ul .li-contact:nth-child(2)::before {
+  content: "";
+  position: absolute;
+  background-image: url("../images/svg-contact/location-dot-solid.svg");
+  width: 24px;
+  height: 32px;
+  top: 0;
+  right: 90%;
+}
+.resume__container .resume-contact ul .li-contact:nth-child(3) {
+  position: relative;
+}
+.resume__container .resume-contact ul .li-contact:nth-child(3)::before {
+  content: "";
+  position: absolute;
+  background-image: url("../images/svg-contact/envelope-solid.svg");
+  width: 43px;
+  height: 32px;
+  top: 0;
+  right: 103%;
+}
+.resume__container .resume-contact ul .li-contact:nth-child(4) {
+  position: relative;
+}
+.resume__container .resume-contact ul .li-contact:nth-child(4)::before {
+  content: "";
+  position: absolute;
+  background-image: url("../images/svg-contact/github.svg");
+  width: 32px;
+  height: 32px;
+  top: 0;
+  right: 103%;
+}
+.resume__container .resume-contact ul .li-contact:nth-child(5) {
+  position: relative;
+}
+.resume__container .resume-contact ul .li-contact:nth-child(5)::before {
+  content: "";
+  position: absolute;
+  background-image: url("../images/svg-contact/linkedin.svg");
+  width: 32px;
+  height: 32px;
+  top: 0;
+  right: 103%;
+}
+.resume__container .resume-contact ul .li-contact a {
+  color: #f5cec7;
+  transition: color 0.4s ease-in-out;
+}
+.resume__container .resume-contact ul .li-contact a:hover {
+  color: #e79796;
+}
+
+footer {
+  background-color: #c6c09c;
+  width: 100%;
+  height: 400px;
+  position: relative;
+}
+footer::before {
+  content: "";
+  position: absolute;
+  background-image: url("../images/flowers-footer.svg");
+  width: 909px;
+  height: 169px;
+  bottom: 97%;
+  right: 6%;
+}
+footer p {
+  text-align: center;
+  color: #ffffff;
+}
+footer p:nth-child(1) {
+  position: relative;
+  font-family: "Antique olive";
+  padding: 154px 0 20px;
+}
+footer p:nth-child(1)::before {
+  content: "";
+  position: absolute;
+  background-image: url("../images/copyright-solid.svg");
+  width: 32px;
+  height: 32px;
+  top: 154px;
+  right: 74%;
 }/*# sourceMappingURL=main.css.map */

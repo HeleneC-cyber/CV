@@ -1,0 +1,33 @@
+footer {
+  background-color: $color-007;
+  width: 100%;
+  height: 400px;
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    background-image: url("../images/flowers-footer.svg");
+    width: 909px;
+    height: 169px;
+    bottom: 97%;
+    right: 6%;
+  }
+  p {
+    text-align: center;
+    color: $color-white;
+    &:nth-child(1) {
+      position: relative;
+      font-family: $font-001;
+      padding: 154px 0 20px;
+      &::before {
+        content: "";
+        position: absolute;
+        background-image: url("../images/copyright-solid.svg");
+        width: 32px;
+        height: 32px;
+        top: 154px;
+        right: 74%;
+      }
+    }
+  }
+}

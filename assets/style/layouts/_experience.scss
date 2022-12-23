@@ -2,15 +2,11 @@
   position: relative;
   .carrousel__wrapper {
     display: flex;
-    //Problème de marge inexistante sur le rendu... (dans html changement des svg chevron width 71 --> width 60 de même dans view)
     margin: 240px auto 0;
-    width: 1920px;
+    width: fit-content;
 
     .carousel-title {
       .carrousel {
-        .carrousel-btn {
-          padding: 0;
-        }
         .green-btn {
           svg {
             path {

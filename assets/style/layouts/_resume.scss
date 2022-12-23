@@ -33,7 +33,7 @@
     .resume-en-resume {
       position: relative;
       background-color: $color-white;
-      border-radius: 0 50px 0 0;
+      border-radius: 0 100px 0 0;
       width: 970px;
       height: calc(1420px - 130px);
       object-fit: contain;
@@ -125,12 +125,119 @@
     .resume-contact {
       position: relative;
       background-color: $color-white;
-      border-radius: 50px 0 0 0;
+      border-radius: 100px 0 0 0;
       max-width: 781px;
-      height: calc(695px - 130px);
+      height: calc(695px - 60px);
       object-fit: contain;
-      padding: 130px 0 0 0;
+      padding: 60px 98px 0 0;
       margin-top: 725px;
+      &::before {
+        content: "";
+        position: absolute;
+        background-image: url("../images/bell-solid.svg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 81px;
+        height: 93px;
+        transform: rotate(-30deg);
+        top: 40px;
+        left: 40px;
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 50px;
+        height: 371px;
+        background-color: $color-005;
+      }
+      h2 {
+        z-index: 1;
+        color: $color-005;
+        text-transform: none;
+        position: relative;
+        margin-left: 180px;
+      }
+      ul {
+        padding: 83px 0 0 0;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        .li-contact {
+          color: $color-003;
+          text-align: end;
+          padding-bottom: 20px;
+          &:nth-child(1) {
+            position: relative;
+            &::before {
+              content: "";
+              position: absolute;
+              background-image: url("../images/svg-contact/phone-solid.svg");
+              width: 32px;
+              height: 32px;
+              top: 0;
+              right: 105%;
+            }
+          }
+          &:nth-child(2) {
+            max-width: 70%;
+            position: relative;
+            &::before {
+              content: "";
+              position: absolute;
+              background-image: url("../images/svg-contact/location-dot-solid.svg");
+              width: 24px;
+              height: 32px;
+              top: 0;
+              right: 90%;
+            }
+          }
+          &:nth-child(3) {
+            position: relative;
+            &::before {
+              content: "";
+              position: absolute;
+              background-image: url("../images/svg-contact/envelope-solid.svg");
+              width: 43px;
+              height: 32px;
+              top: 0;
+              right: 103%;
+            }
+          }
+          &:nth-child(4) {
+            position: relative;
+            &::before {
+              content: "";
+              position: absolute;
+              background-image: url("../images/svg-contact/github.svg");
+              width: 32px;
+              height: 32px;
+              top: 0;
+              right: 103%;
+            }
+          }
+          &:nth-child(5) {
+            position: relative;
+            &::before {
+              content: "";
+              position: absolute;
+              background-image: url("../images/svg-contact/linkedin.svg");
+              width: 32px;
+              height: 32px;
+              top: 0;
+              right: 103%;
+            }
+          }
+          a {
+            color: $color-003;
+            transition: color 0.4s ease-in-out;
+            &:hover {
+              color: $color-004;
+            }
+          }
+        }
+      }
     }
   }
 }
