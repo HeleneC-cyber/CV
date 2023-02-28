@@ -16,8 +16,13 @@
 
 h1 {
   color: $color-004;
-  @include rem(55);
+  @include rem(34);
+  text-align: center;
   margin-bottom: 20px;
+  @include min($sm) {
+    @include rem(55);
+    text-align: left;
+  }
 }
 
 h2 {
